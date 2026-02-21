@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page d'administration</title>
+</head>
+<style>
+    body,html{
+        padding:0;
+        margin:0;
+    }
+    header{
+        height:50px;
+        width:100%;
+        text-align:center;
+        box-shadow 0px 2px 4px rgba(0,0,0,0.1);
+        text-align:;
+        font-size:30px;
+        color:#1c1c1e;
+     
+     
+    }
+    /* for buttons on line */
+    #sec{
+        display:flex;
+         flex-direction:column;
+         align-items:center;
+        
+         
+    }
+    /* buts in sec line */
+    .but{
+    background:#eee;
+    border-radius:15px;
+    text-align:center;
+    border:1px solid #eee;
+    font-size:20px;
+    color:#1c1c1e;
+    width:140px;
+  
+    
+    }
+    .but:active{
+        transform:scale(0.9);
+     
+    }
+    
+    /* for public */
+    .image{
+        width:120px;
+        height:130px;
+ 
+    }
+    .divise{
+        
+    }
+    /* div message btn */
+  .dbtn  {
+      border:1px solid #ddd;
+      border-radius:20px;
+      text-align:center;
+     
+      width:85%;
+      height:100;
+  }
+  
+  /* btn message */
+  .btn{
+      border:1px solid #E6C200;
+      background:#E6C200;
+      text-align:center;
+      border-radius:20px;
+      font-size:20px;
+      width:70%;
+  }
+  .btn:active {
+      transform:scale(0.9)
+  }
+  #secu{
+     display:flex;
+         flex-direction:column; 
+         align-items:center;
+  }
+  .hr{
+      width:95%;
+  }
+  /* a for btn message */
+ .abut{
+     text-decoration:none;
+ }
+ footer{
+        background:#1c1c1e;
+        width:100%;
+        text-align:center;
+        color:white;
+        height:200px:
+        position: relative;
+        bottom:100px;
+    }
+    
+    /* not visible*/
+    #seca{
+        display:none;
+    }
+    
+    .enbas{
+        border-radius:15px;
+        background:#eee;
+        border:1px solid #eee;
+    }
+    #enbas:hover{
+        background:#eee;
+    }
+    
+    #newText{
+     
+        border-radius:10px;
+        border:1px solid skyblue;
+    }
+    
+    
+    #btn-move{
+        position:fixed;
+        z-index:1000;
+      right:0;
+       
+        
+    }
+    
+</style>
+<body>
+ <br>   <header><a href="utilisateur.html" style="font-size:35px; text-decoration:none; position: relative;right:40px;color:black;"> < </a>Marketplace<span>&#x1F6CD;</span>
+ </header><hr>
+    <maim>
+   
+       
+       
+             
+        
+        
+        
+        <!-- section for buttons on line -->
+        <br>
+        <section id="sec">
+            <button id="bouton2" class="but" onclick="articles()" style="background: skyblue;">publications et articles</button>
+            
+        </section><br><hr>
+       
+       <!-- for all images -->
+       
+     
+   
+           
+           
+     <div id="btn-move">  
+    <div style="border-radius:300px; border:1px solid #ddd; box-shadow:0 2px 4px 4px rgba(0,0,0,0.1); width:35px;height:35px;background:white; text-align:center;" onclick="window.scrollTo(0,0);">  🔺 </div>      
+      
+   <br><br><br><br><br><br>
+      <div style="border-radius:300px; border:1px solid #ddd; box-shadow:0 2px 4px 4px rgba(0,0,0,0.1); width:35px;height:35px; background:white; text-align:center;" onclick="window.scrollTo(0,document.body.scrollHeight);">🔻</div>
+      
+</div>      
+      
+      
+      
+      <br><br>
+    <div id="contenu"></div>
+      <div id="ajout-form" style="display: none;">
+          
+       
+          <br><br>
+          <textarea  placeholder="Entrez un titre..." id="title-input" style="border-top:none;border-right:none; border-radius:15px;width:200px;"></textarea>
+          <br><br>
+    <input type="file" id="image-input" style="border-radius:8px; background:#eee;">
+ <br><br>
+ 
+ <br>   
+    <textarea id="texte-input" placeholder="Entrez un commentaire..." style="border:1px solid skyblue; border-radius:15px;border-top:none;border-right:none; width:250px;"></textarea>
+    <br><br>
+    <button id="ajouter-element" style="border:1px solid;color:#eee; background:#1c1c1e; border-radius:10px;width:60px;height:40px; text-align:center;">Ajouter</button>
+  </div>
+    <br><br>  
+      
+       <div style="width:70px; height:75px; background:#E6C200;border:none; border-radius:20px; text-align:center;" id="ajouter"
+><br>nouveau<strong>+</strong></div>    <br><br> 
+   <br><br><br>
+       </section>      
+    </main>
+    <br><br><br><br><br> <br><br>
+    <footer>
+        <br><br>
+        All rights reserved.copyright©2026.
+        <br>
+        web design by:<a href="https://botolo40.github.io/Mindy/" style="color: white;"><br>        <img src="https://i.ibb.co/Z1JtDxZB/IMG-20260218-WA0009-1.jpg"  style="width:50px; height:50px; clip-path:circle(50% at 50% 50%);">
+        <br>Mindy entreprise</a><br><br><a style ="color:white;"href="utilisateur.html">page utilisateur</a><br><br>
+        <br><br>
+        
+    </footer>
+</body>
+
+
+<script>
+    
+    
+    
+    /* afficher catégories ou articles */
+        document.addEventListener('DOMContentLoaded', () => {
+
+});
+// Vérifier si l'utilisateur est connecté et a le rôle d'admin
+if (localStorage.getItem('role') !== 'admin') {
+  window.location.href = 'index.html';
+}
+
+// Récupérer les éléments
+const boutonAjouter = document.getElementById('ajouter');
+const contenu = document.getElementById('contenu');
+const ajoutForm = document.getElementById('ajout-form');
+const imageInput = document.getElementById('image-input');
+const texteInput = document.getElementById('texte-input');
+const ajouterElementButton = document.getElementById('ajouter-element');
+const titleInput = document.getElementById("title-input");
+
+// Définir les dimensions pré-écrites
+
+const height =350;
+
+// Créer un tableau pour stocker les éléments
+let elements = [];
+
+// Charger les éléments existants
+if (localStorage.getItem('elements')) {
+  elements = JSON.parse(localStorage.getItem('elements'));
+  afficherElements();
+}
+
+// Ajouter un événement au bouton
+boutonAjouter.addEventListener('click', () => {
+  ajoutForm.style.display = 'block';
+});
+
+// Ajouter un événement au bouton ajouter élément
+
+ajouterElementButton.addEventListener('click', () => {
+  const fichier = imageInput.files[0];
+  const lecteur = new FileReader();
+
+  lecteur.onload = (e) => {
+    const imageUrl = e.target.result;
+    const texte = texteInput.value;
+    const title = titleInput.value;
+    // Créer un objet pour l'élément
+    const element = {
+      image: imageUrl,
+      texte: texte,
+      title: title,
+      date: new Date().toLocaleString(),
+      
+      height: height
+    };
+
+    // Ajouter l'élément au tableau
+    elements.push(element);
+
+    // Enregistrer les éléments dans le stockage local
+    localStorage.setItem('elements', JSON.stringify(elements));
+
+    // Afficher les éléments
+    afficherElements();
+
+    // Réinitialiser le formulaire
+    ajoutForm.style.display = 'none';
+    imageInput.value = '';
+    texteInput.value = '';
+    titleInput.value = '';
+  };
+
+  lecteur.readAsDataURL(fichier);
+});
+
+// Fonction pour afficher les éléments
+function afficherElements() {
+  // Vider le contenu
+  contenu.innerHTML = '';
+
+  // Afficher les éléments
+  elements.forEach((element, index) => {
+    const html = `
+    <p style="font-size:25px;"><strong>${element.title}</strong></p>
+      <img src="${element.image}" style="width:100%;"height="${element.height}">
+      <p>${element.texte} <p style="color:#ccc;font-size:15px;">publié le ${element.date}</p><button id="enbas" onclick="modifierElement(${index})" style="border:none; background: white; font-size:35px;" ><b>...</b></button></p>
+      <div id="options-${index}" style="display: none;">
+        <button class="enbas" onclick="modifierTexte(${index})">Modifier le texte</button>
+        <button class="enbas" onclick="modifierImage(${index})">Modifier l'image</button>
+        <button class="enbas" onclick="supprimerElement(${index})">Supprimer</button>
+        <br><br>
+         <!-- new text -->
+        <textarea id="newText" placeholder="Entrez le nouveau texte..."></textarea> 
+      </div><br>
+     
+       
+      
+      <br><br>    <div class="dbtn">
+             <br>  Envoyer un message à la personne qui vend.
+              <br><br>
+              <!-- btn3 message --><a href="sms:+243832151402" class="abut"> <button class="btn">message</button></a><br><br>
+           </div>
+     
+   
+           
+           <br><br>
+           
+           
+      <hr style="width:95%;">     
+      <br><br><br> 
+      
+    `;
+    contenu.innerHTML += html;
+  });
+}
+
+// Fonction pour modifier un élément
+function modifierElement(index) {
+  const options = document.getElementById(`options-${index}`);
+   
+ 
+//to display options to modify
+  options.style.display = options.style.display === 'none' ? 'block' : 'none';
+}
+
+// Fonction pour modifier le texte
+function modifierTexte(index) {
+  //for new text
+  const newText= document.getElementById("newText").value;
+  elements[index].texte = newText;
+  localStorage.setItem('elements', JSON.stringify(elements));
+  afficherElements();
+}
+
+// Fonction pour modifier l'image
+function modifierImage(index) {
+  const input = document.createElement('input');
+  input.type = 'file';
+  input.accept = 'image/*, video/*';
+
+  input.addEventListener('change', (e) => {
+    const fichier = e.target.files[0];
+    const lecteur = new FileReader();
+
+    lecteur.onload = (e) => {
+      const imageUrl = e.target.result;
+      elements[index].image = imageUrl;
+      localStorage.setItem('elements', JSON.stringify(elements));
+      afficherElements();
+    };
+
+    lecteur.readAsDataURL(fichier);
+  });
+
+  input.click();
+}
+
+// Fonction pour supprimer un élément
+function supprimerElement(index) {
+  // Supprimer l'élément du tableau
+  elements.splice(index, 1);
+
+  // Enregistrer les éléments dans le stockage local
+  localStorage.setItem('elements', JSON.stringify(elements));
+
+  // Afficher les éléments
+  afficherElements();
+}
+
+
+</script>
+
+</html>

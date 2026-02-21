@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Utilisateur</title>
+</head>
+<body>
+  <style>
+    body,html{
+        padding:0;
+        margin:0;
+    }
+ 
+    header{
+        height:50px;
+        width:100%;
+        text-align:center;
+        box-shadow 0px 2px 4px rgba(0,0,0,0.1);
+        text-align:;
+        font-size:30px;
+        color:#1c1c1e;
+     
+     
+    }
+    /* for buttons on line */
+    #sec{
+        display:flex;
+        flex-direction: column;
+        align-items:center;
+         
+         
+    }
+    /* buts in sec line */
+    .but{
+    background:#eee;
+    border-radius:15px;
+    text-align:center;
+    border:1px solid #eee;
+    font-size:20px;
+    color:#1c1c1e;
+    width:140px;
+   
+   
+    
+    }
+    .but:active{
+        transform:scale(0.9);
+     
+    }
+    
+    /* for public */
+    .image{
+        width:120px;
+        height:130px;
+ 
+    }
+    .divise{
+        
+    }
+    /* div message btn */
+  .dbtn  {
+      border:1px solid #ddd;
+      border-radius:20px;
+      text-align:center;
+     
+      width:85%;
+      height:100;
+  }
+  
+  /* btn message */
+  .btn{
+      border:1px solid #E6C200;
+      background:#E6C200;
+      text-align:center;
+      border-radius:20px;
+      font-size:20px;
+      width:70%;
+  }
+  .btn:active {
+      transform:scale(0.9)
+  }
+  #secu{
+     display:flex;
+         flex-direction:column; 
+         align-items:center;
+  }
+  .hr{
+      width:95%;
+  }
+  /* a for btn message */
+ .abut{
+     text-decoration:none;
+ }
+ footer{
+        background:#1c1c1e;
+        width:100%;
+        text-align:center;
+        color:white;
+        height:200px:
+        position: relative;
+        bottom:100px;
+    }
+    
+    /* not visible*/
+    #seca{
+        display:none;
+    }
+    
+    /*  to make element fixed */
+       #btn-move{
+        position:fixed;
+        z-index:1000;
+      right:0;
+       
+        
+    }
+</style>
+<body>
+ <br>   <header><a href="index.html" style="font-size:35px; text-decoration:none; position: relative;right:40px;color:black;"> < </a>Marketplace<span>&#x1F6CD;</span></header><hr>
+    <maim>
+   
+       
+       
+             
+        
+        
+        
+        <!-- section for buttons on line -->
+        <br>
+        <section id="sec">
+          <div>  <button id="bouton2" class="but"  style="background: skyblue;">articles et publications</button></div>
+            
+        </section><br><hr>       
+       <!-- for all images -->                                      
+           <div id="btn-move">  
+    <div style="border-radius:300px; border:1px solid #ddd; box-shadow:0 2px 4px 4px rgba(0,0,0,0.1); width:35px;height:35px;background:white; text-align:center;" onclick="window.scrollTo(0,0);">  🔺 </div>      
+      
+   <br><br><br><br><br><br>
+      <div style="border-radius:300px; border:1px solid #ddd; box-shadow:0 2px 4px 4px rgba(0,0,0,0.1); width:35px;height:35px; background:white; text-align:center;" onclick="window.scrollTo(0,document.body.scrollHeight);">🔻</div>
+      
+</div>      
+      
+      
+                                             
+    <div id="contenu"></div>
+    <br><br>  
+      
+      <br><br>
+      
+    </main>
+    <br><br><br><br><br>
+    <footer>
+        <br><br>
+        All rights reserved.copyright©2026.
+        <br>
+        web design by:<a href="https://botolo40.github.io/Mindy/" style="color: white;"><br><img src="https://i.ibb.co/Z1JtDxZB/IMG-20260218-WA0009-1.jpg"  style="width:50px; height:50px; clip-path:circle(50% at 50% 50%);"><br>Mindy entreprise</a><br><br><a style ="color:white; text-decoration:none;"href="secure.html">page d'administration</a><br><br>
+        
+    </footer>    
+</body><script>
+document.addEventListener('DOMContentLoaded', () => {
+  
+
+  // Récupérer les éléments
+  const contenu = document.getElementById('contenu');
+
+  // Définir les dimensions pré-écrites
+  
+  const height =350;
+
+  // Créer un tableau pour stocker les éléments
+  let elements = [];
+
+  // Charger les éléments existants
+  if (localStorage.getItem('elements')) {
+    elements = JSON.parse(localStorage.getItem('elements'));
+    afficherElements();
+  }
+
+  // Fonction pour afficher les éléments
+  function afficherElements() {
+    // Vider le contenu
+    contenu.innerHTML = '';
+
+    // Afficher les éléments
+    elements.forEach((element, index) => {
+      const html = `
+      
+      <p style="font-size:25px;"><strong>${element.title}</strong></p>
+        <img src="${element.image}"  height="${element.height}" style="width:100%;">
+        <p>${element.texte} <p style="color:#cccccc; font-size:16px;">publié le ${element.date}</p></p>
+    
+    <br><br>    <div class="dbtn">
+             <br>  Envoyer un message à la personne qui vend.
+              <br><br>
+              <!-- btn3 message --><a href="sms:+243832151402" class="abut"> <button class="btn">message</button></a><br><br>
+           </div>
+     
+   
+           
+           <br><br>
+      <hr style="width:95%;">     
+      <br><br><br>   
+      
+      
+          
+      `;
+      contenu.innerHTML += html;
+    });
+  }
+});
+
+//to make the images bigger 
+    
+</script>
+</html>

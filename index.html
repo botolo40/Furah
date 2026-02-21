@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furaha boutique</title>
+</head>
+<style >
+    body,html{
+        padding:0;
+        margin:0;
+        
+    }
+    body{
+        display:flex;
+        flex-direction: column;
+        align-items:center;
+        background:#f2f2f2;
+    }
+    #main{
+        background:white;
+        width:95%;
+        border-radius:10px;
+        height:auto;
+        
+        display:flex;
+        flex-direction: column;
+        align-items:center;
+    }
+   main{
+      display:flex;
+        flex-direction: column;
+        align-items:center; 
+   }
+    .hr{
+        width:100%;
+        
+    }
+    /* style for all div in main*/
+    .div{
+        width:90%;
+        height:250px;
+        font-size:16px;
+        color:#1c1c1e;
+      background:#eee;
+      text-align:center;
+      font-weight:300;
+    }
+    .img{
+        width:100%;
+        height:160px;
+        border-radius:20px;
+    }
+    .head{
+        font-size:40px;
+         color:#1c1c1e;
+         border:1px solid #E6C200;
+         border-radius:20px;
+         box-shadow:0 2px 4px rgba(0,0,0,0.1);
+    }
+    /* classe for the mode of use */
+    #spnr{
+        background:#1c1c1e;
+        width:60px;
+        height:60px;
+        border-radius:15px;
+    }
+    /* for the pointer*/
+    #pointer{
+       
+      position: relative;
+      left:92%;
+        cursor:pointer;
+        font-size:30px;
+    }
+    /* div for menu */
+    #num{
+    display:none;
+        border:1px solid #f2f2f2;
+        width:200px;
+        height:250px;
+        position: absolute;
+        left:30%;
+        background:#f2f2f2;
+        box-shadow:0 2px 8px rgba(0,0,0,.2);
+    }
+    #num a {
+        display:block;
+        text-decoration:none;
+         color:#1c1c1e;
+         
+ 
+    }
+    
+    /* for a */
+    #num a:active{
+        background:#eee;
+    }
+   
+    /* for the div images placed*/
+    .for{
+        width:150px;
+        height:200px;
+        border-radius:15px;
+        border:1px solid #ccc;
+    }
+    /* images */
+    .im{
+        width:100%;
+        height:150px;
+        border-radius:15px;
+    }
+    
+    /* to align four images */
+    .sect{
+        display:flex;
+        flex-direction: column;
+    }
+    
+    /* for divs in sect */
+    .diva{
+        display:flex;
+        flex-direction:line;
+    }
+    .for:hover{
+        transform:scale(0.9);
+        box-shadow:0px 2px 8px rgba(0,0,0,0.2);
+    }
+    
+    footer{
+        background:#1c1c1e;
+        width:100%;
+        text-align:center;
+        color:white;
+        height:200px:
+    }
+    #com{
+        color: green;
+    }
+/* for h in long div */
+.h{
+    font-size:30px;
+    color:#E6C200;
+    text-shadow:0 2px 8px #ddd;
+}
+</style>
+
+<body>
+    <header>
+       
+        <!-- for the pointer -->
+        <span onclick="berger()" id="pointer">&#8942;</span>
+        <br>
+        <div id="num">
+            <br><br>
+            <a href="utilisateur.html">Marketplace<span>&#x1F6CD;</span></a>
+            <br><br>
+            
+            <a href="https://wa.me/+243832151402" >WhatsApp</a>
+            <br><br>
+            <a  onclick="shareSite()">partager  le site 📤</a>
+        </div>
+      <!-- tag  -->
+        <div class="head">
+        <span style="color:#E6C200;">FURAH</span><span id="spn">boutique</span></div>
+    </header>
+   
+   <br><br><br><br>
+   <main>
+       
+   <div style="border:1px solid #ccc; text-align:center; background:#eee;width:80%; border-radius:15px; box-shadow:0 2px 8px #ddd "><br><br>Furahboutique est à votre service et vous accompagne pour des meilleurs choix.<br><br>
+   <p id="com">commander en ligne</p>
+   </div>    <br><br><br>
+       
+       
+       
+        <!-- long div to contain all --><div id="main">
+        <!-- first div for main-->
+  <br><br><br><div class="div"><h1 class="h">A propos de nous</h1>Furaha boutique est un business de vente des articles en ligne avec livraison rapide.
+  <br> Ce site nous permet d'être plus proche de vous et répondre à vos besoins d'achat.</div>
+   <br><hr class="hr"><br>
+<!-- 2nd -->
+<div class="div"><h2 class="h">Nos services</h2>
+Puisque nous sommes des vendeurs,nous mettons à votre choix des articles de qualité et des marques à très abordables prix.
+<br><br>
+Ne tardez plus! <br>
+visitez notre marketplace pour bénéficier de toutes ces offres.
+</div>
+
+<br><br><br>
+<!-- end of long div-->
+       </div>
+       <br><br><br><br><br><br>
+       <section>
+
+<p>Tout ce que vous aimez se trouve chez FURAH.</p>
+<br><br>
+
+</section>
+<br><br>
+
+<!-- for the images -->
+<section class="sect">
+    <!-- for 1st div img-->
+    <!-- 1 -->
+    <div class="diva">
+    <div class="for" style="position: relative; right:5px;"><img src="https://i.ibb.co/jvjx7KTc/IMG-20260221-152359-241.jpg" alt="" class="im">FURAH, c'est la joie dans vos achats.</div>
+    <br>
+    <!-- 2nd -->
+    <div class="for" style="position: relative;left:5px;"><img src="https://i.ibb.co/HfDW4091/IMG-20260221-152313-828.jpg" alt="" class="im">Tout est disponible et livré en emballage</div>
+    <br>
+    </div>
+  <br><br>  
+    
+    <!-- 2 -->
+    <div class="diva">
+    <!-- 3rd -->
+    <div class="for" style="position: relative; right:5px;"><img src="https://i.ibb.co/My1FgTdw/IMG-20260127-124414-106.jpg" alt="" class="im">New Balance 1000 original</div>
+    <br>
+    <!-- 4th -->
+    <div class="for" style="position: relative;left:5px;"><img src="https://i.ibb.co/RTM7kgYX/IMG-20260221-152421-307.jpg" alt="" class="im"> Du shopping à fond</div>
+    </div>
+    
+</section>
+<br><br>
+<a href="marketplace.html" style="color: skyblue;">visiter notre marketplace pour plus de choix.</a><br><br><br><br><br>
+<!-- to visit the marketplace -->
+<div style="width:75%; background:white; box-shadow:0 2px 4px #ddd;">Voir les nouveautés<a href="utilisateur.html" style="text-decoration:none; position:relative;left:20%; font-size:40px;color:#E6C200;"> > </a></div><br><br>
+ </main>
+<br><br><br><br><br><br><br><br>
+<img src="https://i.ibb.co/k27rr9FZ/IMG-20260221-WA0019.jpg" alt="" style="width:100%;">
+    <footer>
+        <br><br>
+        All rights reserved.copyright©2026.
+        <br>
+        web design by:<a href="https://botolo40.github.io/Mindy/" style="color: white;"><br>
+        <img src="https://i.ibb.co/Z1JtDxZB/IMG-20260218-WA0009-1.jpg"  style="width:50px; height:50px; clip-path:circle(50% at 50% 50%);"><br>Mindy entreprise</a><br><p>From MindyEntreprise<br></p><br><br>
+        
+    </footer>
+</body>
+<script>
+    
+
+    /* function to display menu */  
+   function berger(){ 
+   const menu=document.getElementById("num")
+       menu.style.display=
+       menu.style.display === "block" ? "none" : "block";
+   }
+    
+    
+    
+    
+//to share the site
+
+function shareSite(){
+    if(navigator.share){
+        navigator.share({
+            title:document.title,
+            text:"Commandez vos articles avec FURAH Boutique 😊",
+            url:window.location.href
+          
+        })
+    }
+    else{
+        alert("le partage n'est pas supporté sur ce navigateur !");
+    }
+}
+
+    
+</script>
+</html>

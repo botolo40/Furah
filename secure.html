@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Authentification</title>
+  <style>
+    #error-message {
+      color: red;
+      display: none;
+    }
+    body{
+        background:skyblue;
+        text-align:center;
+    }
+    input{
+        border-radius:15px;
+        border:2px solid #ddd;
+        height:50px;
+        width:250px;
+    }
+    h1{
+        color:orange;
+    }
+    a{
+        color:white;
+    }
+    #para{
+        color:red;
+        display:none;
+    }
+  </style>
+</head>
+<body>
+    
+    
+    <h1>Seul les administrateurs peuvent visiter cette page</h1>
+    <a href="utilisateur.html">je ne suis pas admin!</a>
+    <br><br><br><br>
+ <form id="login-form">
+     
+     <label>Entrez le mot de passe administrateur</label>
+     <br><br>
+     <input type="password"  placeholder="mot de passe..." onty id="input">
+     <br><br>
+     <input  type="submit">
+ </form>
+<p id="para">Le mot de passe entrée est incorrecte !</p>
+ 
+</body>
+<script>
+const loginForm=document.getElementById("login-form");  loginForm.addEventListener('submit',() => {
+  const in1= document.getElementById('input').value;
+ const pass="mangaforeach";
+  if (in1 === pass) {
+    window.location.href = 'admin.html';
+  } else {
+    para.style.display = 'block';
+  }
+});
+
+ 
+</script>
+</html>
