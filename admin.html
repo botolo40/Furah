@@ -207,11 +207,6 @@
         document.addEventListener('DOMContentLoaded', () => {
 
 });
-// Vérifier si l'utilisateur est connecté et a le rôle d'admin
-if (localStorage.getItem('role') !== 'admin') {
-  window.location.href = 'index.html';
-}
-
 // Récupérer les éléments
 const boutonAjouter = document.getElementById('ajouter');
 const contenu = document.getElementById('contenu');
