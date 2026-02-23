@@ -1,85 +1,79 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Authentification</title>
   <style>
     #error-message {
       color: red;
       display: none;
     }
-    body{
-        background:skyblue;
-        text-align:center;
+    body {
+      background: skyblue;
+      text-align: center;
     }
-    input{
-        border-radius:15px;
-        border:2px solid #ddd;
-        height:50px;
-        width:250px;
+    input {
+      border-radius: 15px;
+      border: 2px solid #ddd;
+      height: 50px;
+      width: 250px;
     }
-    h1{
-        color:orange;
+    h1 {
+      color: orange;
     }
-    a{
-        color:white;
+    a {
+      color: white;
     }
-    #para{
-        color:red;
-        display:none;
+    #para {
+      color: red;
+      display: none;
     }
   </style>
 </head>
 <body>
-    
-    
-    <h1>Seul les administrateurs peuvent visiter cette page</h1>
-    <a href="utilisateur.html">je ne suis pas admin!</a>
-    <br><br><br><br>
- <form id="login-form">
-     
-     <label>Entrez le mot de passe administrateur</label>
-     <br><br>
-     <input type="password"  placeholder="mot de passe..." onty id="input">
-     <br>
-     
-   <br>  
-<button type="button" id="toggle-password" style="border-radius:8px;border:1px solid #eee;">Afficher</button>
- 
-     <br>
-     <br>
-     <input  type="submit">
-    
- </form>
-<p id="para">Le mot de passe entrée est incorrecte !</p>
+  <h1>Seul les administrateurs peuvent visiter cette page</h1>
+  <a href="utilisateur.html">je ne suis pas admin!</a>
+  <br><br><br><br>
+  <form id="login-form">
+    <label>Entrez le mot de passe administrateur</label>
+    <br><br>
+    <input type="password" placeholder="mot de passe..." id="input">
+    <br>
+    <br>
+    <button type="submit" id="toggle-password" style="border-radius:8px;border:1px solid                         
+    <br>
+    <br>
+    <input type="submit" value="Se connecter">
+  </form>
+  <p id="para">Le mot de passe entrée est incorrecte !</p>
 
+  <script>
+    const loginForm = document.getElementById("login-form");
+    const para = document.getElementById('para');
+    const passwordInput = document.getElementById('input');
+    const togglePasswordButton = document.getElementById('toggle-password');
+    const pass = "mangaforeach";
 
- 
+    loginForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const in1 = passwordInput.value;
+      if (in1 === pass) {
+        window.location.href = 'admin.html';
+      } else {
+        para.style.display = 'block';
+      }
+    });
+
+    togglePasswordButton.addEventListener('click', () => {
+      if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+        togglePasswordButton.textContent = 'Masquer';
+      } else {
+        passwordInput.type = 'password';
+        togglePasswordButton.textContent = 'Afficher';
+      }
+    });
+  </script>
 </body>
-<script>
-const loginForm = document.getElementById("login-form");  loginForm.addEventListener('submit',() => {
-  const in1 = document.getElementById('input').value;
- const pass="mangaforeach";
-  if (in1 === pass) {
-    window.location.href = 'admin.html';
-  } else {
-    para.style.display = 'block';
-  }
-});
-
- // for password 
- const passwordInput = document.getElementById('input');
-const togglePasswordButton = document.getElementById('toggle-password');
-
-togglePasswordButton.addEventListener('click', () => {
-  if (passwordInput.type === 'password') {
-    passwordInput.type = 'text';
-    togglePasswordButton.textContent = 'Masquer';
-  } else {
-    passwordInput.type = 'password';
-    togglePasswordButton.textContent = 'Afficher';
-  }
-});
-</script>
 </html>
