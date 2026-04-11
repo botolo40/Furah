@@ -1,55 +1,335 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Espace public</title>
-    <style>
-        body { font-family: Arial; padding: 20px; }
-        .item { border-bottom: 1px solid #ccc; margin: 15px 0; padding: 10px; }
-        img { max-width: 200px; vertical-align: top; margin-right: 10px; }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Furah boutique en ligne</title>
 </head>
-<body>
-    <h1>Publications</h1>
-    <div id="contenu">Chargement...</div>
+<style>
+    body,html{
+        padding:0;
+        margin:0;
+    }
+    body{
+        background:#1a1a1a;
+    }
+    header{
+    margin:0;
+        position:fixed;
+        z-index:1000;
+        width:100%;
+        height:50px;
+        background:#151515e5;
+        text-align:center;
+        border-bottom:1px solid #404040d1;
+        
+    }
+ 
+    main{
+    margin:0;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        background:;
+    }
+  /* style du menu */
+  
+  #menu{
+  margin-top:0;
+      display:none;
+      width:100%;
+      height:450px;
+      color:#d9d9d9cb;
+      background:#070707f2;
+      text-align: start;
+  } 
+  /* classe pour les options dans le menu*/
+  .option{
+      font-size:30px;
+      font-weight:bold;
+      margin-top:5px;
+      margin-bottom:0;
+      cursor:pointer;
+      width:100%;
+      
+  }
+  /* les conteneurs produits*/
+  .product {
+      border:1px solid #c0c0c0;
+      width:250px;
+      height:350px;
+      border-radius:10px;
+      box-shadow:0 2px 4px #b9b9b9dd;
+  }
+  .product:hover{
+      box-shadow:none;
+      transform:scale(0.96);
+  }
+   
+   /* images dans les div */
+   .img{
+       width:100%;
+       height:250px;
+   }
+   
+   /* style pour les favoris*/
+   
+   .comment{
+    color:#e09d4bc4;
+    font-size:23px;
+    font-weight:bold;
+   }
+   
+   /* voir plus */
+   #more{
+       border:2px solid #ffb200;
+       color:#ffb200;
+       text-align:center;
+       cursor:pointer;
+   }
+   /* les contenus cachés dans voir plus*/
+   #hidden{
+       display:none;
+   }
+   footer{
+       text-align:center;
+       color:white;
+       background:#ffb200;
+       width:100;
+       display:flex;
+       flex-direction:column;
+       align-items:center;
+       
+   }
+   .link{
+       text-decoration:none;
+       color:white;
+       margin-top:8px;
+   }
+   
+  .fa-cont{
+      width:45px;
+      height:45px;
+      border:1px solid #ff880042;
+      background:#ff880042;
+      border-radius:300px;
+   
+  }
+</style>
+<body><header>
+   
+<!-- barres de menu -->
+<div style="display:flex;flex-direction:line;">
+<div style="cursor:pointer;color:#d9d9d9cb; margin:0;margin-top:16px;margin-left:20px;" id="bars"><i class="fas fa-bars" style="font-size:20px;"></i>
 
+
+
+</div>
+<!-- titre du site -->
+<div>
+<p style="color:#ffb200; font-weight:bold; font-family:serif;margin-top:16px;position:relative;left:65px; ">FURAH BOUTIQUE</p>   </div></div><br>
+
+<nav id="menu">
+    <br>
+    <br>
+    <p class="option" onclick="window.location.href='about.html'">À propos</p>
+    <br>
+    <p class="option" onclick="window.location.href='https://wa.me/243991860850'">WhatsApp</p>
+    <br>
+    <p class="option" onclick="shareSite();">partager le site <i class="fas fa-share-alt"></i></p>
+    <br><br>
+</nav>
+
+</header>
+<br><br><br>
+<main>
+    <br><br>
+    
+    <!-- st grande div  -->
+<div style="width:97%;background:#131313; height:auto; border:1px solid #404040d1; border-radius:10px;text-align:center;color:#d9d9d9cb;"><h1 style="font-size:28px; font-family: fantasy;">Vous aimez acheter des vêtements de<br> qualité <b style="color:#ffb200;">?</b></h1><br>
+<p style="color:#ffb200; font-weight:bold; font-family:serif;margin-top:16px; ">FURAH <b style="color:#d9d9d9cb;">BOUTIQUE</b></p>
+
+<br>
+<p> est à votre service avec des vêtements à couper le souffle</p>
+<br><br>
+
+<!-- bouton vers WhatsApp -->
+<div style="border:2px solid #d9d9d9cb;color:#ffb200;width:120px; border-radius:15px;cursor:pointer;background:#1a1a1a;" onclick="window.location.href='#'"><p style="margin:5px;" >Découvrir plus > </p></div><br>
+</div>
+<!-- les produits -->
+<br><br><br>
+<h3 style="color:#d9d9d9cb;font-size:23px;">Toutes vos marques préférées sont ici <b style="color:#ffb200;">!</b></h3>
+<br>
+<p style="color:#e3e3e3e0;"><i>Chaussures,maillots,polos, vêtements hommes et femmes,<b>..</b><b style="color:#ffb200;">.</b></i></p>
+<br>
+<!-- div pour les produits -->
+<div class="product">
+    <img src="https://i.ibb.co/C5hDb54V/126509.png" alt="" class="img">
+    <div class="comment"> Profitez pleinement de l'offre</div>
+</div>
+
+<!-- les contenus cachés  -->
+<div id="hidden">
+<br><br>
+<div class="product">
+    <img src="" alt="" class="img">
+  <div class="comment">Ce n'est pas encore fini </div>
+</div>
+<br><br>
+<br><br>
+<div class="product">
+    <img src="" alt="" class="img">
+  <div class="comment">Ce n'est pas encore fini </div>
+</div>
+<br><br>
+<br><br>
+<div class="product">
+    <img src="" alt="" class="img">
+  <div class="comment">Ce n'est pas encore fini </div>
+</div>
+<br><br>
+
+<div class="product">
+    <img src="" alt="" class="img">
+  <div class="comment">Ce n'est pas encore fini </div>
+</div>
+<!-- rejoindre le groupe WhatsApp-->
+<br><br>
+<a href="#" style="color:#6db34b;">Rejoignez notre groupe WhatsApp</a>
+</div>
+<br><br>
+
+<!-- pour voir plus -->
+<div id="more"><p style="margin-left:5px;margin-right:5px;margin-top:3px;margin-bottom:3px;" id="para"></p></div>
+
+
+
+
+ <br><br><br>
+
+<!-- Actualités page Facebook--> 
+<div style="text-align:center;"> <h2 style="color:#d9d9d9cb;font-size:46px;">Suivez notre fil d'actualités <u style="color:#1523ffac;">Facebook</u> <br>pour ne rien rater</h2></div>
+ <div>
+     <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D100065624134951&tabs=timeline&width=350&height=350&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="200" height="350" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+ </div>  
+ <!-- actualité ^^ -->
+ 
+ 
+ 
+ 
+</main>
+    <footer>
+        <br><br>
+      <a href="about.html" class="link">À PROPOS DE NOUS</a>  <br>
+      <a href="#" class="link">CONTACTEZ-NOUS</a>
+      <br>
+      <a href="#" class="link">TERMES ET CONDITIONS</a>
+      <br>
+      <p style="font-weight:bold; font-size:21px;">Entrez en contact</p><br>
+      <div class="fa-cont">
+      <i class="fas fa-phone" style="font-size:22px; margin-top:12px;"></i></div>
+<br> 
+ <a href="tel:+243 832 151 402" class="link">+243 832 151 402/</a>  
+ <br> 
+ <a href="tel:+243 832 151 402" class="link">+243 832 151 402/</a>
+ <br>
+ <a href="tel:+243 832 151 402" class="link">+243 832 151 402</a>
+   
+   
+   
+   <br><br>
+      <div class="fa-cont"><i class="fas fa-location-dot" style="font-size:22px;margin-top:12px;"></i></div>
+      
+      <p>République Démocratique du Congo/kinshasa</p>
+         
+      
+      <br><br>
+      <div class="fa-cont"><i class="fas fa-envelope" style="font-size:22px;margin-top:12px;"></i></div>
+      
+      <p>furahboutique40@gmail.com</p>
+      
+      <br>
+      <div>
+      <i class="fab fa-facebook" style="font-size:22px;"></i>
+   
+   <i class="fab fa-whatsapp" style="margin-left:20px;font-size:22px;" onclick="window.location.href='https://wa.me/243991860850'"></i>
+   <i class="fab fa-tiktok" style="margin-left:20px;font-size:22px;" onclick="'https://vm.tiktok.com/ZS9Lj3D7X7sbM-iDQBL/'"></i>
+    </div>
+    
+      <br>
+      <p style="border-top:1px solid #ff8800d6; margin-top:5px;">
+          <br>
+      © 2026 pâques.Tous les droits réservés.</p>
+      <br><br>
+    </footer>
+    
     <script>
-        // Bin ID (public)
-        const BIN_ID = '69b5a5dac3097a1dd52594bd';
-        const READ_URL = `https://api.jsonbin.io/v3/b/${BIN_ID}/latest`;
+        
+        
+        
+        // pour afficher le menu
+        let bar=document.getElementById("bars");
+        let nav=document.getElementById("menu");
+      bar.addEventListener('click',()=>{
+nav.style.display=
+nav.style.display=== "block"?"none":"block";
+})
 
-        async function afficherPublications() {
-            try {
-                const response = await fetch(READ_URL);
-                const data = await response.json();
-                // Le contenu est dans data.record.articles
-                const elements = data.record.articles || [];
-                const contenuDiv = document.getElementById('contenu');
 
-                if (elements.length === 0) {
-                    contenuDiv.innerHTML = '<p>Aucune publication pour le moment.</p>';
-                    return;
-                }
 
-                let html = '';
-                elements.forEach(element => {
-                    html += `
-                        <div class="item">
-                            <img src="${element.image}" alt="Image">
-                            <p><strong>${element.texte}</strong></p>
-                            <small>Publié le ${element.date}</small>
-                        </div>
-                    `;
-                });
-                contenuDiv.innerHTML = html;
-            } catch (error) {
-                console.error(error);
-                document.getElementById('contenu').innerHTML = '<p>Erreur de chargement.</p>';
-            }
-        }
 
-        // Lancer au chargement de la page
-        afficherPublications();
+//pour le partage du site 
+function shareSite(){
+if (navigator.share){
+    navigator.share({
+        title:document.title,
+        text:"ACHETEZ VOS VÊTEMENTS AVEC FURAH BOUTIQUE 🛍️ 🛒",
+        url:window.location.href
+   } );
+}
+else{
+    alert("Le partage n'est pas supporté sur ce navigateur !");
+}
+}  
+
+// pour les contenus voir plus 
+
+// la phrase "voir plus"
+let plusPara=document.getElementById("para");
+
+//la div more(voir plus)
+
+let plus=document.getElementById("more");
+let voir=document.createTextNode("voir plus");
+plusPara.appendChild(voir);
+
+//id de la div contenant les contenus cachés 
+
+let invisible=document.getElementById("hidden");
+
+let text=document.createTextNode("moins");
+
+//script qui permet de changer le "voir plus " en "moins"
+
+
+    plus.addEventListener('click',()=>{
+invisible.style.display=
+invisible.style.display=== "block"?"none":"block";
+
+//conditions pour changer 
+
+if (invisible.style.display==="none"){
+plusPara.appendChild(voir);
+plusPara.removeChild(text,more);
+
+}
+else{
+ plusPara.removeChild(voir);
+plusPara.appendChild(text,more);   
+}
+})
     </script>
 </body>
 </html>
